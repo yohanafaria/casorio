@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-ivory: #F5F0E8;
+  --color-warm-white: #FCFAF6;
+  --color-burgundy: #621F2A;
+  --color-wine: #40151D;
+  --color-olive: #596044;
+  --color-eucalyptus: #7E8C78;
+  --color-blush: #D8B8AF;
+  --color-graphite: #292622;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    background-color: var(--color-ivory);
+    color: var(--color-graphite);
+  }
+
+  h1, h2, h3, h4, .font-editorial {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+  }
+
+  /* Foco visível acessível compatível com WCAG 2.2 AA */
+  *:focus-visible {
+    outline: 2px solid var(--color-burgundy);
+    outline-offset: 3px;
+  }
+}
+
+/* Textura sutil de papel algodão / linho sem pesar na performance */
+.bg-linen-texture {
+  background-color: #F5F0E8;
+  background-image: 
+    radial-gradient(at 15% 15%, rgba(216, 184, 175, 0.16) 0px, transparent 50%),
+    radial-gradient(at 85% 80%, rgba(126, 140, 120, 0.12) 0px, transparent 55%),
+    repeating-linear-gradient(
+      45deg,
+      rgba(41, 38, 34, 0.012) 0px,
+      rgba(41, 38, 34, 0.012) 1px,
+      transparent 1px,
+      transparent 6px
+    );
+}
+
+/* Respeito integral a prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

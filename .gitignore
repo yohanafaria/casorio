@@ -1,0 +1,17 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+dist-ssr/
+
+# Environment variables (NUNCA versionar chaves reais)
+.env
+.env.local
+.env.*.local
+
+# Logs & Editor
+*.log
+.DS_Store
+.vscode/
+.idea/

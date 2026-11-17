@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none">
+  <rect width="120" height="120" rx="28" fill="#F5F0E8"/>
+  <!-- Curva arquitetônica fluida inspirada em arcoondas.jpg -->
+  <path d="M18 96 C42 74, 52 28, 102 22" stroke="#D8B8AF" stroke-width="2.5" stroke-linecap="round" fill="none" opacity="0.7"/>
+  <!-- Ramo sutil de oliva/eucalipto -->
+  <path d="M26 88 Q44 62 66 48" stroke="#596044" stroke-width="1.75" stroke-linecap="round" fill="none"/>
+  <ellipse cx="42" cy="67" rx="7" ry="3.5" transform="rotate(-35 42 67)" fill="#7E8C78" opacity="0.85"/>
+  <ellipse cx="55" cy="54" rx="6.5" ry="3" transform="rotate(-25 55 54)" fill="#596044" opacity="0.85"/>
+  <!-- Monograma D & Y -->
+  <text x="60" y="72" text-anchor="middle" font-family="Georgia, 'Cormorant Garamond', serif" font-size="40" font-weight="600" fill="#621F2A" letter-spacing="-1">
+    D<tspan font-size="24" font-style="italic" fill="#596044" dx="1" dy="-4">&amp;</tspan><tspan dx="1" dy="4">Y</tspan>
+  </text>
+</svg>
