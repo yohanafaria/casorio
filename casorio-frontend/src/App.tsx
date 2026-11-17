@@ -22,7 +22,7 @@ const ScrollToTop: React.FC = () => {
 
 export const App: React.FC = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={import.meta.env.BASE_URL}>
       <CartProvider>
         <ScrollToTop />
         <div className="min-h-screen flex flex-col bg-ivory text-graphite">
