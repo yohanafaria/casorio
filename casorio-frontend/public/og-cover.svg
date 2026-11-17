@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" fill="none">
+  <rect width="1200" height="630" fill="#F5F0E8"/>
+  <path d="M0 480 C320 390, 580 570, 1200 410 L1200 630 L0 630 Z" fill="#EAE2D6" opacity="0.7"/>
+  <path d="M0 540 C400 460, 750 610, 1200 490 L1200 630 L0 630 Z" fill="#621F2A" opacity="0.08"/>
+  <circle cx="600" cy="315" r="220" stroke="#D8B8AF" stroke-width="1.5" fill="#FCFAF6" opacity="0.85"/>
+  <text x="600" y="255" text-anchor="middle" font-family="Georgia, serif" font-size="22" fill="#596044" letter-spacing="6">14 . 11 . 2027 • RIO DE JANEIRO</text>
+  <text x="600" y="335" text-anchor="middle" font-family="Georgia, serif" font-size="76" fill="#621F2A">Daniel &amp; Yohana</text>
+  <text x="600" y="395" text-anchor="middle" font-family="Georgia, serif" font-style="italic" font-size="28" fill="#292622">“A vida fica mais feliz quando é compartilhada.”</text>
+</svg>
