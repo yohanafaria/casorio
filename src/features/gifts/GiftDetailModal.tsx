@@ -35,7 +35,13 @@ export const GiftDetailModal: React.FC<GiftDetailModalProps> = ({
           : Math.round(gift.price / 2)
       );
       closeBtnRef.current?.focus();
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
     }
+    return () => {
+      document.body.style.overflow = '';
+    };
   }, [gift]);
 
   useEffect(() => {
@@ -63,7 +69,7 @@ export const GiftDetailModal: React.FC<GiftDetailModalProps> = ({
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center p-4 overflow-y-auto"
+      className="fixed inset-0 z-50 flex items-end sm:items-center justify-center p-0 sm:p-4"
       role="dialog"
       aria-modal="true"
       aria-labelledby="gift-modal-title"
@@ -74,34 +80,34 @@ export const GiftDetailModal: React.FC<GiftDetailModalProps> = ({
         aria-hidden="true"
       />
 
-      <div className="relative z-10 w-full max-w-2xl rounded-organic bg-warmwhite border border-blush/50 shadow-2xl overflow-hidden animate-fade-in-up my-8">
+      <div className="relative z-10 w-full max-w-2xl max-h-[90dvh] sm:max-h-[88vh] flex flex-col rounded-t-organic sm:rounded-organic bg-warmwhite border-t sm:border border-blush/50 shadow-2xl overflow-hidden animate-fade-in-up">
         <button
           ref={closeBtnRef}
           type="button"
           onClick={onClose}
-          className="absolute top-4 right-4 z-20 w-10 h-10 rounded-full bg-warmwhite/90 border border-blush/50 flex items-center justify-center text-graphite hover:text-burgundy transition-colors"
+          className="absolute top-3 right-3 sm:top-4 sm:right-4 z-30 w-10 h-10 rounded-full bg-warmwhite/95 border border-blush/60 shadow-md flex items-center justify-center text-graphite hover:text-burgundy transition-colors"
           aria-label="Fechar detalhes do presente"
         >
           <X className="w-5 h-5" aria-hidden="true" />
         </button>
 
-        <div className="grid grid-cols-1 md:grid-cols-12">
-          <div className="md:col-span-5 bg-ivory flex flex-col justify-between p-6 border-b md:border-b-0 md:border-r border-blush/35">
+        <div className="overflow-y-auto overscroll-contain grid grid-cols-1 md:grid-cols-12">
+          <div className="md:col-span-5 bg-ivory flex flex-col justify-between p-4 sm:p-6 border-b md:border-b-0 md:border-r border-blush/35">
             <img
               src={gift.image}
               alt={gift.name}
-              className="w-full aspect-[4/3] md:aspect-square object-cover rounded-xl border border-blush/30 bg-warmwhite"
+              className="w-full max-h-48 sm:max-h-none aspect-[16/10] sm:aspect-[4/3] md:aspect-square object-cover rounded-xl border border-blush/30 bg-warmwhite"
             />
             {gift.musicalNote && (
-              <div className="mt-4 p-3 rounded-xl bg-warmwhite/80 border border-blush/35 flex items-center gap-2 text-xs text-olive">
+              <div className="mt-3 sm:mt-4 p-2.5 sm:p-3 rounded-xl bg-warmwhite/80 border border-blush/35 flex items-center gap-2 text-xs text-olive">
                 <Music className="w-4 h-4 text-burgundy shrink-0" aria-hidden="true" />
                 <span className="italic">{gift.musicalNote}</span>
               </div>
             )}
           </div>
 
-          <div className="md:col-span-7 p-6 sm:p-8 flex flex-col justify-between space-y-5">
-            <div className="space-y-3">
+          <div className="md:col-span-7 p-5 sm:p-8 flex flex-col justify-between space-y-4 sm:space-y-5">
+            <div className="space-y-2.5 sm:space-y-3">
               <div className="flex flex-wrap items-center gap-2">
                 <span className="text-[11px] uppercase tracking-[0.18em] px-2.5 py-0.5 rounded-full bg-olive/15 text-olive font-medium">
                   {gift.category}
@@ -123,11 +129,11 @@ export const GiftDetailModal: React.FC<GiftDetailModalProps> = ({
                 )}
               </div>
 
-              <h2 id="gift-modal-title" className="font-serif text-3xl text-graphite leading-tight">
+              <h2 id="gift-modal-title" className="font-serif text-2xl sm:text-3xl text-graphite leading-tight">
                 {gift.name}
               </h2>
 
-              <p className="font-serif text-3xl font-semibold text-burgundy">
+              <p className="font-serif text-2xl sm:text-3xl font-semibold text-burgundy">
                 {formatCurrencyBRL(gift.price)}
               </p>
 
